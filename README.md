@@ -23,6 +23,10 @@ For additional context and resources, I referenced the following:
 ## Motivation
 This script was primarily developed for research purposes, facilitating the analysis of the KDBX format and its security aspects.
 
+I also created a similar script that, instead of converting the KDBX file to a specific format, reads and prints all the outer headers of the KDBX file. This script is compatible with all KDFs, as long as the file follows the KDBX 4 format. 
+
+If you are interested it can be found in my other public repositories or in [KeePass2-kdbx-4-header-extract](https://github.com/CamposTaPro/KeePass2-kdbx-4-header-extract)!
+
 ## Compatibility
 This script has been tested with a few databases using **Argon2** as the KDF.
 
