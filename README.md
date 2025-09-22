@@ -1,7 +1,7 @@
 # KeePass2 to John the Ripper Converter
 
 ## Introduction
-This script extracts the outer headers of a KDBX 4 file and formats the relevant parameters into a structure compatible with John the Ripper (JtR) password cracker.
+This script extracts the outer headers of a KDBX 4 file and formats the relevant parameters into a structure compatible with John the Ripper (JtR) password cracker and **as of Hashcat 7.1** it should also be compatible with mode 34300!
 
 **Important Notes:**
 - This script is **only compatible** with KDBX 4 files using **Argon2** as the Key Derivation Function (KDF).
@@ -18,7 +18,7 @@ For additional context and resources, I referenced the following:
 
 ## Features
 - Extracts outer headers from KDBX 4 files using Argon2 as the KDF.
-- Converts extracted parameters into a format compatible with John the Ripper.
+- Converts extracted parameters into a format compatible with John the Ripper and Hashcat.
 
 ## Motivation
 This script was primarily developed for research purposes, facilitating the analysis of the KDBX format and its security aspects.
@@ -53,7 +53,7 @@ python keepass2johnArgon2.py -h
 Here’s an example output when processing a KDBX database with Argon2d:
 
 ```shell
-Passwords:$keepass$*4*58*ef636ddf8c29444b91f7a9a403e30a0c*16777216*19*2*470541af0812fa595728152e0fae91e785ab8887bc954b5cd64f276587ba8fad*48148e2966c90461318ccb5907ae10602ffabbfd6b5744963ae8ab3bd9c68c2d*68004a9e9190199b5269fdfe2bd986388cecc65d60feccee9874be7ede84025d*357a360ee25b582e0b2ded6e815fc95838e3187240b3ed7a2b3831020e4834d1
+keepass2john$keepass$*4*42*ef636ddf*67108864*19*6*b929a7bc6ba6763c93082760f7afbe5413fd2da0f4fb6a71115a387af585012f*f7e118d4a45bb877dfa21131e0d27f1213cff5f6de540701f1d97aef52ab4783*03d9a29a67fb4bb500000400021000000031c1f2e6bf714350be5805216afc5aff0304000000010000000420000000b929a7bc6ba6763c93082760f7afbe5413fd2da0f4fb6a71115a387af585012f07100000008efcab5ab97f52626f197c4902aa8c170b8b00000000014205000000245555494410000000ef636ddf8c29444b91f7a9a403e30a0c050100000049080000002a0000000000000005010000004d080000000000000400000000040100000050040000000600000042010000005320000000f7e118d4a45bb877dfa21131e0d27f1213cff5f6de540701f1d97aef52ab478304010000005604000000130000000000040000000d0a0d0a*ee570c4fb35005be47deb222aed44362e733d26a92cccc67a3e5b42435d6586b
 ```
 
 ## Contributions
