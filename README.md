@@ -1,7 +1,7 @@
 # KeePass2 to John the Ripper Converter
 
 ## Introduction
-This script extracts the outer headers of a KDBX 4 file and formats the relevant parameters into a structure compatible with John the Ripper (JtR) password cracker and **as of Hashcat 7.1** it should also be compatible with mode 34300!
+This script extracts the outer headers of a KDBX 4 file and formats the relevant parameters into a structure compatible with John the Ripper (JtR) password cracker and, **as of Hashcat 7.1**, it should also be compatible with Hashcat mode 34300!
 
 **Important Notes:**
 - This script is **only compatible** with KDBX 4 files using **Argon2** as the Key Derivation Function (KDF).
